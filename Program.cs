@@ -11,7 +11,12 @@ namespace SuncoastMovies
             var context = new SuncoastMoviesContext();
 
             var movieCount = context.Movies.Count();
-            Console.WriteLine("Hey");
+            Console.WriteLine($"There are {movieCount} movies!");
+
+            foreach (var movie in context.Movies)
+            {
+                Console.WriteLine($"{movie.Title}");
+            }
 
         }
 
