@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Linq;
 
 namespace SuncoastMovies
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to C#");
+            var context = new SuncoastMoviesContext();
+
+            var movieCount = context.Movies.Count();
+            Console.WriteLine("Hey");
+
         }
+
     }
 }
